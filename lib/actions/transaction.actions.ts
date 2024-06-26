@@ -49,7 +49,6 @@ export const getTransactionsByBankId = async ({
       TRANSACTION_COLLECTION_ID!,
       [Query.equal("receiverBankId", bankId)]
     );
-// 5:56:20
     const transactions = {
       total: senderTransactions.total + receiverTransactions.total,
       documents: [
